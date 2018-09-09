@@ -21,5 +21,10 @@ class LoginPanelController extends CI_Controller{
     	$this->load->view('registerPanel');
     }
 
+    public function toAdmin(){
+    	$this->load->view('Operator/header');
+    	$this->load->view('Operator/footer');
+    }
+
 }
 ?>
