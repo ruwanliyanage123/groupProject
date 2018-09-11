@@ -12,7 +12,6 @@ class LoginPanelController extends CI_Controller{
 	}
 
     public function process(){
-        //echo 'hahahahahha';
         $this->load->model('loginPanelValidation');
         $this->loginPanelValidation->validate();  
     }
@@ -21,9 +20,15 @@ class LoginPanelController extends CI_Controller{
     	$this->load->view('registerPanel');
     }
 
-    public function toAdmin(){
-    	$this->load->view('Operator/header');
-    	$this->load->view('Operator/footer');
+    public function addUser(){
+    	$this->load->model('registerUser');
+        $this->loginPanelValidation->register();  
+    }
+
+    public function applicant(){
+    	$this->load->view('applicant/header');
+    	$this->load->view('applicant/personalDetails');
+    	$this->load->view('applicant/footer');
     }
 
 }
