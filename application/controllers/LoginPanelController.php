@@ -26,9 +26,9 @@ class LoginPanelController extends CI_Controller{
     }
 
     public function applicant(){
-    	$this->load->view('applicant/header');
-    	$this->load->view('applicant/personalDetails');
-    	$this->load->view('applicant/footer');
+    	$this->load->view('users/operator/header');
+    	$this->load->view('users/operator/createAd');
+    	$this->load->view('users/operator/footer');
     }
 
 }
